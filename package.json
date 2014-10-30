@@ -1,0 +1,22 @@
+{
+  "name": "gulp-mew-template",
+  "version": "0.0.1",
+  "description": "Precompile template file to a cmd module with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mew",
+    "template",
+    "grunt"
+  ],
+  "author": "Leshu <lele.lll@cainiao.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "mew-template": "0.0.4"
+  }
+}
