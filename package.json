@@ -1,10 +1,10 @@
 {
   "name": "gulp-mew-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Precompile template file to a cmd module with gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm test"
   },
   "keywords": [
     "mew",
@@ -14,9 +14,13 @@
   "author": "Leshu <lele.lll@cainiao.com>",
   "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.5"
+    "gulp": "~3.8.9",
+    "gulp-clean": "~0.3.1",
+    "gulp-rename": "~1.2.0"
   },
   "dependencies": {
-    "mew-template": "0.0.4"
+    "gulp-util": "^3.0.1",
+    "mew-template": "^0.1.0",
+    "through-gulp": "^0.3.1"
   }
 }
