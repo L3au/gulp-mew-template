@@ -22,6 +22,7 @@ module.exports = function(options) {
         try {
             compiled = template(contents, options);
             file.contents = new Buffer(compiled);
+            file.path     = gutil.replaceExtension(file.path, '.js');
 
             this.push(file);
             callback();

@@ -1,6 +1,6 @@
 {
   "name": "gulp-mew-template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Precompile template file to a cmd module with gulp",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "template",
     "grunt"
   ],
-  "author": "Leshu <lele.lll@cainiao.com>",
+  "author": "Leshu <leshu.lau@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "gulp": "~3.8.9",

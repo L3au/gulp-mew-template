@@ -12,7 +12,6 @@ Usage
 ```js
 var gulp = require('gulp');
 var clean = require('gulp-clean');
-var rename = require('gulp-rename');
 var template = require('mew-template');
 
 gulp.task('clean', function() {
@@ -26,17 +25,11 @@ gulp.task('template', ['clean'], function() {
             engine: 'dot',
             syntax: '<%%>'
         }))
-        .pipe(rename({
-            extname: '.js'
-        }))
         .pipe(gulp.dest('test/dest'));
 
     gulp.src('test/tpl/handlebars.tpl')
         .pipe(template({
             engine: 'handlebars'
-        }))
-        .pipe(rename({
-            extname: '.js'
         }))
         .pipe(gulp.dest('test/dest'));
 
@@ -44,17 +37,11 @@ gulp.task('template', ['clean'], function() {
         .pipe(template({
             engine: 'jst'
         }))
-        .pipe(rename({
-            extname: '.js'
-        }))
         .pipe(gulp.dest('test/dest'));
 
     gulp.src('test/tpl/xtemplate.tpl')
         .pipe(template({
             engine: 'xtemplate'
-        }))
-        .pipe(rename({
-            extname: '.js'
         }))
         .pipe(gulp.dest('test/dest'));
 });
