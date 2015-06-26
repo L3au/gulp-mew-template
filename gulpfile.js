@@ -1,6 +1,6 @@
 var gulp = require('gulp');
+var notify = require('gulp-notify');
 var clean = require('gulp-clean');
-var rename = require('gulp-rename');
 var template = require('./');
 
 gulp.task('clean', function() {
@@ -14,8 +14,9 @@ gulp.task('template', ['clean'], function() {
             engine: 'dot',
             syntax: '<%%>'
         }))
-        .pipe(rename({
-            extname: '.js'
+        .on('error', notify.onError({
+            title  : 'Template Error in <%= error.filepath %>',
+            message: '<%= error.stack %>'
         }))
         .pipe(gulp.dest('test/dest'));
 
@@ -23,26 +24,17 @@ gulp.task('template', ['clean'], function() {
         .pipe(template({
             engine: 'handlebars'
         }))
-        .pipe(rename({
-            extname: '.js'
-        }))
         .pipe(gulp.dest('test/dest'));
 
     gulp.src('test/tpl/jst.tpl')
         .pipe(template({
             engine: 'jst'
         }))
-        .pipe(rename({
-            extname: '.js'
-        }))
         .pipe(gulp.dest('test/dest'));
 
     gulp.src('test/tpl/xtemplate.tpl')
         .pipe(template({
             engine: 'xtemplate'
-        }))
-        .pipe(rename({
-            extname: '.js'
         }))
         .pipe(gulp.dest('test/dest'));
 });

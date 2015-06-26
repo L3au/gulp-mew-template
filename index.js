@@ -27,7 +27,9 @@ module.exports = function(options) {
             this.push(file);
             callback();
         } catch (e) {
-            console.log(file.path, '\n', e.stack);
+            e.filename = file.path;
+            e.filepath = file.path.split('/').slice(-3).join('/');
+            callback(e);
         }
     });
 };
