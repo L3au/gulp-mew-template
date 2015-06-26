@@ -11,6 +11,7 @@ Usage
 ----
 ```js
 var gulp = require('gulp');
+var notify = require('gulp-notify');
 var clean = require('gulp-clean');
 var template = require('mew-template');
 
@@ -24,6 +25,10 @@ gulp.task('template', ['clean'], function() {
         .pipe(template({
             engine: 'dot',
             syntax: '<%%>'
+        }))
+        .on('error', notify.onError({
+            title  : 'Template Error in <%= error.filepath %>',
+            message: '<%= error.stack %>'
         }))
         .pipe(gulp.dest('test/dest'));
 
