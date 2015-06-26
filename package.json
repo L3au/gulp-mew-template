@@ -1,6 +1,6 @@
 {
   "name": "gulp-mew-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Precompile template file to a cmd module with gulp",
   "main": "index.js",
   "scripts": {
