@@ -1,8 +1,12 @@
 {
   "name": "gulp-mew-template",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Precompile template file to a cmd module with gulp",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:L3au/gulp-mew-template.git"
+  },
   "scripts": {
     "test": "npm test"
   },
