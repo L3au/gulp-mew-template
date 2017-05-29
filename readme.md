@@ -1,6 +1,8 @@
 gulp-mew-template
 ====
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/L3au/gulp-mew-template.svg)](https://greenkeeper.io/)
+
 Install
 ----
 ```bash
